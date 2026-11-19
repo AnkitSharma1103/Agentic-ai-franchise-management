@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+﻿from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from auth import auth_router
 from agents import ai_router
@@ -15,6 +15,15 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(ai_router)
+
+
+@app.get("/")
+def root():
+    return {
+        "status": "online",
+        "service": "Salon FranchiseOps Agentic AI Backend",
+        "docs": "/docs",
+    }
 
 
 @app.get("/api/v1/health")
