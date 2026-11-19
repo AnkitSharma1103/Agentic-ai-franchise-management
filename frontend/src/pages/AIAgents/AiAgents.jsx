@@ -4,7 +4,7 @@ import { useBusiness } from '../../context/BusinessContext'
 import { PageHeader, KpiCard, ChartCard, StatusBadge } from '../../components/common/ui'
 import { inr } from '../../utils/format'
 
-const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1'
+const BACKEND_URL = 'https://agentic-ai-franchise-management.onrender.com/api/v1'
 
 export default function AIAgents() {
   const { user } = useBusiness()
